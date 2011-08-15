@@ -1,0 +1,7 @@
+%section{:class => 'photos'}
+
+  - if @picture.nil?
+    %p
+      This picture doesn't exist
+  - else
+    = partial :picture, :locals => {:picture => @picture}

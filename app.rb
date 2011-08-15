@@ -11,9 +11,12 @@ helpers do
   end
 end
 
-
-
 get '/' do
   @pictures = Picture.all
   haml :index
+end
+
+get '/:id' do
+  @picture = Picture.find(params[:id])
+  haml :show
 end

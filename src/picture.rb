@@ -18,6 +18,11 @@ class Picture < Hash
       meta, description = File.read(file_path).split(/\n\n/, 2)
       Picture.new(YAML.load(meta).inject({}) {|h, (k,v)| h.merge(k.to_sym => v) }.merge(:description => description))
     end
+    
+    def find(id)
+      file_path =  Dir["pictures/#{id}.yml"].first
+      Picture.load file_path if file_path
+    end
   end
   
   def initialize(attributes = {})
