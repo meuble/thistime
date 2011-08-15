@@ -27,6 +27,16 @@ body {
 	opacity: 0.5;
 }
 
+.photos footer h2 {
+	font-size: 1em;
+	margin: 0px;
+}
+
+.photos footer .info {
+	font-size: 0.8em;
+	margin: 0px;
+}
+
 img {
 	height: 100%;
 	-webkit-border-radius:10px;
