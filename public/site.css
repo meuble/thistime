@@ -4,7 +4,7 @@ body {
 	font-family: verdana;
 }
 
-#header {
+.wide #header {
 	position: fixed;
 	right: 0;
 	background-color: #EEE;
@@ -12,28 +12,40 @@ body {
 	z-index: 1;
 }
 
+.small #header {
+	background-color: #EEE;
+	padding: 20px;
+}
+
 .photos {
-	height: 100%;
-	margin: 10px;
-	position: relative;
 	text-align: center;
 }
 
-.photos footer {
+.photo {
+	padding: 0;
+	margin: 10px auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.photo footer {
 	width: 100%;
-	padding: 10px;
 	position: absolute;
 	bottom: 0;
 	background-color: #000;
-	opacity: 0.5;
+	opacity: 0.7;
+	margin: 0;
+	padding: 10px;
+	display: none;
+	text-align: left;
 }
 
-.photos footer h2 {
+.photo footer h2 {
 	font-size: 1em;
 	margin: 0px;
 }
 
-.photos footer .info {
+.photo footer .info {
 	font-size: 0.8em;
 	margin: 0px;
 }
@@ -43,4 +55,7 @@ img {
 	-webkit-border-radius:10px;
   -moz-border-radius:10px;
   border-radius:10px;
+	margin: 0;
+	padding: 0;
+	border: none;
 }
