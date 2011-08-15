@@ -1,68 +1,8 @@
 %section{:class => 'photos'}
-  %article{:class => 'photo'}
-    %img{:src => "http://farm7.static.flickr.com/6139/6002819151_a040f32ff3_b.jpg", :alt => "Sommet du pic de l'étandard, Juillet 2011", :title => "Sommet du pic de l'étandard, Juillet 2011"}
-    %footer
-      %h2
-        Sommet du pic de l'étandard, Juillet 2011
-      %p{:class => "info"}
-        Par Stéphane Akkaoui - le 31 Juillet 2011
 
-  %article{:class => 'photo'}
-    %img{:src => "http://farm7.static.flickr.com/6123/6002813845_62b0129d01_b.jpg", :alt => "Pic de l'étandard, Juillet 2011", :title => "Pic de l'étandard, Juillet 2011"}
-    %footer
-      %h2
-        Pic de l'étandard, Juillet 2011
-      %p{:class => "info"}
-        Par Stéphane Akkaoui - le 31 Juillet 2011
-      
-      %p{:class => "description"}
-        Je ne voudrais pas rentrer dans des choses trop dimensionnelles, mais, tu vois au passage qu'il n'y a rien de concret car on vit dans une réalité qu'on a créée et que j'appelle illusion car l'aboutissement de l'instinct, c'est l'amour ! Et là, vraiment, j'essaie de tout coeur de donner la plus belle réponse de la terre !
-      
-  %article{:class => 'photo'}
-    %img{:src => "http://farm7.static.flickr.com/6009/6003350896_7da8482dfc_b.jpg", :alt => "Refuge de l'étandard, Juillet 2011", :title => "Refuge de l'étandard, Juillet 2011"}
-    %footer
-      %h2
-        Refuge de l'étandard, Juillet 2011
-      %p{:class => "info"}
-        Par Stéphane Akkaoui - le 31 Juillet 2011
-
-  %article{:class => 'photo'}
-    %img{:src => "http://farm7.static.flickr.com/6142/6002798347_e1058c4390_b.jpg", :alt => "Refuge de l'étandard, Juillet 2011", :title => "Refuge de l'étandard, Juillet 2011"}
-    %footer
-      %h2
-        Refuge de l'étandard, Juillet 2011
-      %p{:class => "info"}
-        Par Stéphane Akkaoui - le 31 Juillet 2011
-
-  %article{:class => 'photo'}
-    %img{:src => "http://farm7.static.flickr.com/6010/5938091055_c28b241ca2_b.jpg", :alt => "Feu d'artifice, Juillet 2011", :title => "Feu d'artifice, Juillet 2011"}
-    %footer
-      %h2
-        14 Juillet 2011 à Paris
-      %p{:class => "info"}
-        Par Stéphane Akkaoui - le 31 Juillet 2011
-
-  %article{:class => 'photo'}
-    %img{:src => "http://farm7.static.flickr.com/6122/5937507378_e5aa29b210_b.jpg", :alt => "Fontainebleau, Juillet 2011", :title => "Fontainebleau, Juillet 2011"}
-    %footer
-      %h2
-        Rock Climbing at Faontainebleau
-      %p{:class => "info"}
-        Par Stéphane Akkaoui - le 16 Juillet 2011
-
-  %article{:class => 'photo'}
-    %img{:src => "http://farm6.static.flickr.com/5093/5474249921_d09a67fc08_b.jpg", :alt => "Esben and the witch concert, Juin 2011", :title => "Esben and the witch concert, Juin 2011"}
-    %footer
-      %h2
-        Esben and the witch concert
-      %p{:class => "info"}
-        Par Stéphane Akkaoui - le 6 Juin 2011
-
-  %article{:class => 'photo'}
-    %img{:src => "http://farm6.static.flickr.com/5299/5474243693_56e5ea1406_b.jpg", :alt => "Transfert concert, Juin 2011", :title => "Transfert concert, Juin 2011"}
-    %footer
-      %h2
-        Transfert concert
-      %p{:class => "info"}
-        Par Stéphane Akkaoui - le 6 Juin 2011
-    
+  - if @pictures.empty?
+    %p
+      Waiting for pictures...
+  - else
+    - for picture in @pictures
+      = partial :picture, :locals => {:picture => picture}

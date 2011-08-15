@@ -1,0 +1,12 @@
+%article{:class => 'photo'}
+  %img{:src => picture.source, :alt => picture.title, :title => picture.title}
+  %footer
+    %h2
+      = picture.title
+    %p{:class => "info"}
+      By
+      = picture.author
+      \ - 
+      = picture.date
+    %div{:class => "description"}
+      = picture.description
