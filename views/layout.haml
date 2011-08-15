@@ -4,6 +4,10 @@
     %title
       This Time - Stéphane Akkaoui's photo blog
     %link{:rel => "stylesheet", :href => "/site.css", :type => "text/css", :media => "screen", :charset =>"utf-8"}
+    %script{:type => "text/javascript", :src => "/jquery.js"}
+    %script{:type => "text/javascript", :src => "/lazyload.js"}
+    :javascript
+      $(document).ready(function() { $("img").lazyload({effect: "fadeIn"}) })
   %body
 
     %header
