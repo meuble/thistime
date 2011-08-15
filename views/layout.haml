@@ -2,18 +2,24 @@
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "fr", :lang => "fr", 'xmlns:fb' => "http://www.facebook.com/2008/fbml"}
   %head
     %title
-      This Time - Stéphane Akkaoui's photo blog
+      = @title
     %link{:rel => "stylesheet", :href => "/site.css", :type => "text/css", :media => "screen", :charset =>"utf-8"}
     %script{:type => "text/javascript", :src => "/jquery.js"}
     %script{:type => "text/javascript", :src => "/application.js"}
     %script{:type => "text/javascript", :src => "/lazyload.js"}
     :javascript
       $(document).ready(function() { $("img").lazyload({effect: "fadeIn"}) })
+    %script{:type => "text/javascript", :src => "http://connect.facebook.net/en_US/all.js#xfbml=1"}	
   %body
     %div{:id => 'wrapper'}
-      %header
-        %h1{:id => "header"}
-          This Time
+      %header{:id => "header"}
+        %h1
+          %a{:href => "/"}
+            This Time
+        %p
+          My name is <a href="http://imeuble.info">Stéphane Akkaoui</a>, and this is a place where I put some pictures I've taken.
+        %div{:class => 'like_button'}
+          %fb:like{:height => "65", :href => 'http://thistime.imeuble.info/', :layout => "button_count", :show_faces => "true", :width => "200", :action => "like", :font => "verdana", :colorscheme =>"light", :send => "true"}
 
       %div
         = yield

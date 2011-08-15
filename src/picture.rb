@@ -1,6 +1,4 @@
-require 'awesome_print'
-require 'yaml'
-require 'bluecloth'
+# coding: utf-8
 
 class Picture < Hash
   class << self
@@ -53,7 +51,7 @@ class Picture < Hash
     self[:author]
   end
   
-  def author
+  def id
     self[:id]
   end
   

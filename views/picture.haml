@@ -10,3 +10,5 @@
       = picture.date
     %div{:class => "description"}
       = picture.description
+    %div{:class => 'like_button'}
+      %fb:like{:height => "65", :href => picture.url, :layout => "button_count", :show_faces => "true", :width => "200", :action => "like", :font => "verdana", :colorscheme =>"light", :send => "true"}
