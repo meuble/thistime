@@ -65,6 +65,11 @@ a:hover {
 	text-align: left;
 }
 
+.photo footer .like_button {
+	float: right;
+	height: 100%;
+}
+
 .photo footer h2 {
 	font-size: 1em;
 	margin: 0px;

@@ -1,8 +1,11 @@
 %article{:class => 'photo'}
   %img{:src => picture.source, :alt => picture.title, :title => picture.title}
   %footer
+    %div{:class => 'like_button'}
+      %fb:like{:height => "65", :href => picture.url, :layout => "button_count", :show_faces => "true", :width => "200", :action => "like", :font => "verdana", :colorscheme =>"light", :send => "true"}
     %h2
-      = picture.title
+      %a{:href => picture.url}
+        = picture.title
     %p{:class => "info"}
       By
       = picture.author
@@ -10,5 +13,3 @@
       = picture.date
     %div{:class => "description"}
       = picture.description
-    %div{:class => 'like_button'}
-      %fb:like{:height => "65", :href => picture.url, :layout => "button_count", :show_faces => "true", :width => "200", :action => "like", :font => "verdana", :colorscheme =>"light", :send => "true"}
