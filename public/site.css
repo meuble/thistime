@@ -7,13 +7,25 @@ body {
 	position: absolute;
 }
 
+
+.photos {
+	height: 100%;
+	margin: 10px;
+	position: relative;
+}
+
+.photos footer {
+	width: 100%;
+	padding: 10px;
+	position: absolute;
+	bottom: 0;
+	background-color: #000;
+	opacity: 0.5;
+}
+
 img {
 	height: 100%;
 	-webkit-border-radius:10px;
   -moz-border-radius:10px;
   border-radius:10px;
-  -webkit-box-shadow:0 0 3px #FFF;
-  -moz-box-shadow:0 0 3px #FFF;
-  box-shadow:0 0 3px #FFF;
-	margin: 10px;
 }
