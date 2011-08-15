@@ -16,7 +16,7 @@ class Picture < Hash
     
     def load(file_path)
       meta, description = File.read(file_path).split(/\n\n/, 2)
-      Picture.new(YAML.load(meta).inject({}) {|h, (k,v)| h.merge(k.to_sym => v) }.merge(:description => description))
+      Picture.new(YAML.load(meta).inject({}) {|h, (k,v)| h.merge(k.to_sym => v) }.merge(:description => description, :id => File.basename(file_path).gsub(/\..*/, '')))
     end
     
     def find(id)
@@ -51,5 +51,13 @@ class Picture < Hash
   
   def author
     self[:author]
+  end
+  
+  def author
+    self[:id]
+  end
+  
+  def url
+    "http://thistime.imeuble.info/#{self.id}"
   end
 end
