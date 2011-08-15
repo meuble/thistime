@@ -1,16 +1,15 @@
 function findSize() {
 	var height = $(window).height();
 	var width = $(window).width();
-
-	if (width < 1000) {
+	var widePhotoWidth = $(window).height() * 1.5
+	
+	if (width < widePhotoWidth + 250) {
 		$('#wrapper').removeClass('wide');
 		$('#wrapper').addClass('small');
 	} else {
 		$('#wrapper').removeClass('small');		
 		$('#wrapper').addClass('wide');
 	}
-
-	var widePhotoWidth = $(window).height() * 1.5
 	
 	$('.photos').css('width', widePhotoWidth > width ? width : widePhotoWidth);
 	$('.photo').each(function(index, element) {
