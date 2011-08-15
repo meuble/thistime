@@ -28,6 +28,7 @@ class Picture < Hash
   end
   
   def description
+    return nil if self[:description].nil? || self[:description].strip.empty?
     begin
       BlueCloth.new(self[:description].to_s.strip).to_html
     rescue 

@@ -1,0 +1,6 @@
+%meta{:property => "og:title", :content => "This Time, Stéphane Akkaoui's photos"}
+%meta{:property => "og:url", :content => 'http://thistime.imeuble.info'}
+- for picture in @pictures do
+  %meta{:property => "og:image", :content => picture.source}
+  
+%meta{:property => "og:description", :content => "Some photos taken at various place, at this time."}

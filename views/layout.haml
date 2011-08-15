@@ -1,8 +1,21 @@
 !!!
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "fr", :lang => "fr", 'xmlns:fb' => "http://www.facebook.com/2008/fbml"}
   %head
+  
+
+    %meta{:property => "fb:app_id", :content => ""}
+    %meta{:property => "fb:admins", :content => "785637999"}
+    %meta{:property => "og:type", :content => "website"}
+    %meta{:property => "og:site_name", :content => "This Time"}
+    
+    - if @picture.nil?
+      = partial :og_site, :locals => {:pictures => @pictures}
+    - else
+      = partial :og_picture, :locals => {:picture => @picture}
+
     %title
       = @title
+
     %link{:rel => "stylesheet", :href => "/site.css", :type => "text/css", :media => "screen", :charset =>"utf-8"}
     %script{:type => "text/javascript", :src => "/jquery.js"}
     %script{:type => "text/javascript", :src => "/application.js"}
@@ -18,7 +31,7 @@
           %a{:href => "/"}
             This Time
         %p
-          My name is <a href="http://imeuble.info">Stéphane Akkaoui</a>, and this is a place where I put some pictures I've taken.
+          My name is <a href="http://imeuble.info">Stéphane Akkaoui</a>, and this is a place where I put pictures taken at various place, at this time...
         %div{:class => 'like_button'}
           %fb:like{:height => "65", :href => 'http://thistime.imeuble.info/', :layout => "button_count", :show_faces => "true", :width => "200", :action => "like", :font => "verdana", :colorscheme =>"light", :send => "true"}
 
