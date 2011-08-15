@@ -60,9 +60,12 @@ a:hover {
 	background-color: #000;
 	opacity: 0.7;
 	margin: 0;
-	padding: 10px;
-/*	display: none;*/
+	display: none;
 	text-align: left;
+}
+
+.photo footer .container {
+	padding: 10px;
 }
 
 .photo footer .like_button {
