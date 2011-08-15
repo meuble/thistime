@@ -1,12 +1,8 @@
-// console.log($(window).height())
-// console.log($(window).width())
-
-
 function findSize() {
 	var height = $(window).height();
 	var width = $(window).width();
 
-	if (width < 1200) {
+	if (width < 1000) {
 		$('#wrapper').removeClass('wide');
 		$('#wrapper').addClass('small');
 	} else {
