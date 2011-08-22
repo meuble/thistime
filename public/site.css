@@ -1,16 +1,18 @@
 body {
-	background-color: black;
-	color: #AAA;
+	background-color: #C9C8B1;
+	color: #7D7F6D;
 	font-family: verdana;
+	margin: 0 10px;
+	padding: 0;
 }
 
 a {
-	color: #AAA;
+	color: #F6F7B2;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #AAA;
+	color: #F6F7B2;
 	text-decoration: underline;
 }
 
@@ -19,7 +21,7 @@ a:hover {
 }
 
 .wide #header {
-	background-color:rgba(0,0,0,0.5);
+	background-color:rgba(0,0,0,0.1);
 	padding: 20px;
 	position: fixed;
 	right: 0;
@@ -28,7 +30,13 @@ a:hover {
 }
 
 #header h1 {
-	background-color: #EEE;
+	background-color: #7D7F6D;
+	color: #DDDEA0;
+}
+
+#header h1 a:hover,
+#header h1 a {
+	color: #DDDEA0;
 }
 
 .wide #header h1 {
@@ -36,7 +44,6 @@ a:hover {
 }
 
 .small #header h1 {
-	background-color: #EEE;
 	padding: 20px;
 }
 
@@ -50,9 +57,13 @@ a:hover {
 .photo {
 	display: block;
 	padding: 0;
-	margin: 10px auto;
+	margin: 20px auto;
 	position: relative;
 	overflow: hidden;
+}
+
+.photo:first-child {
+	margin: 0;
 }
 
 .photo footer {
@@ -64,6 +75,10 @@ a:hover {
 	opacity: 0.7;
 	margin: 0;
 	text-align: left;
+	
+	-webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 .photo footer .container {
