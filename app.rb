@@ -26,7 +26,6 @@ get '/rss' do
   @title = "This Time - Stéphane Akkaoui's photo blog"
   @pictures = Picture.all
   
-  cache_control :public, :must_revalidate, :max_age => 60
   haml(:rss, :format => :xhtml, :escape_html => false, :layout => false)
 end
 
